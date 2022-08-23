@@ -1,0 +1,23 @@
+{
+  "name": "ubiquid-modules",
+  "version": "1.0.0",
+  "description": "Test ubiquid vanilla js components",
+  "main": "index.js",
+  "source": "src/index.html",
+  "scripts": {
+    "build": "rollup --config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fidomi/ubiquid-modules.git"
+  },
+  "author": "Sidonie Moulart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fidomi/ubiquid-modules/issues"
+  },
+  "homepage": "https://github.com/Fidomi/ubiquid-modules#readme",
+  "devDependencies": {
+    "sass": "^1.54.5"
+  }
+}
