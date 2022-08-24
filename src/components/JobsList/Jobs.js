@@ -1,4 +1,4 @@
-import Job from '../Job/Job.js';
+import Job from './Job.js';
 import { selectjobs } from '../../services/jobs-services.js';
 
 const Jobs = async () => {
