@@ -1,7 +1,7 @@
-import App from './app.js';
+import JobsPage from './pages/JobsPage.js';
 
 const insertApp = async () => {
-    document.getElementById('app').appendChild(await App());
+    await JobsPage();
 };
 
 insertApp();

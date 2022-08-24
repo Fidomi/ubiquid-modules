@@ -2,3 +2,5 @@
 node_modules/*
 ./dist/*
 dist/*
+public/css/style.css
+public/css/style.css.map

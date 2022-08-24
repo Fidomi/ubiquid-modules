@@ -5,7 +5,7 @@
   "main": "index.js",
   "source": "src/index.html",
   "scripts": {
-    "build": "rollup --config"
+    "watch:sass": "sass --watch src/style.scss public/css/style.css"
   },
   "repository": {
     "type": "git",
