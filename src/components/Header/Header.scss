@@ -1,0 +1,20 @@
+.header {
+    display:flex;
+    flex-direction: column;
+    padding:45px 40px;
+
+    &__user {
+        align-self: flex-end;
+    }
+
+    &__mainpart {
+        &__title{
+            font-family: Work Sans;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 28px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+    }
+}
