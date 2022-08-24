@@ -1,0 +1,25 @@
+body {
+    width: 100vw;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+            "nav head "
+            "nav main ";
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 110px 1fr;
+
+    header {
+        grid-area: head;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    side-menu {
+        grid-area: nav;
+    }
+
+    
+}
