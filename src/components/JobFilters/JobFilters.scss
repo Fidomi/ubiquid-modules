@@ -1,0 +1,17 @@
+.jobs-filter-container {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+
+        .jobs-filter,
+        .jobs-selection {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            min-height: 40px;
+        }
+
+        .jobs-selection{
+            margin-bottom: 20px;
+        }
+}
