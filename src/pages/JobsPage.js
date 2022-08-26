@@ -12,7 +12,7 @@ const logoUrl = "../../public/assets/logo.png"
 const logoName = "Jobtalk"
 
 async function JobsPage() {
-    document.title = "Les Jobs-JobTalk";
+    document.title = "JobTalk - Les Jobs";
     const MAIN = document.querySelector('main');
     const HEADER = document.querySelector('header');
     document.body.appendChild(SideMenus({logoUrl,logoName, linksArray:Links}));
