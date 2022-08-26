@@ -3,8 +3,9 @@ import JobFilters from '../JobFilters/JobFilters.js';
 import { selectjobs } from '../../services/jobs-services.js';
 
 const Jobs = async () => {
+    var selection = [];
     const jobsContainer = document.createElement("jobs-container");
-    jobsContainer.appendChild(JobFilters());
+    jobsContainer.appendChild(JobFilters(selection));
     const jobList = document.createElement("div");
     jobList.classList.add("jobs-list");
     const allJobs = await selectjobs();

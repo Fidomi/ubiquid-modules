@@ -1,3 +1,5 @@
+import selectionChangeEvent from "../../events/selectionEvent.js";
+
 const removeBlancks = (string) => {
     return string.split("").filter(ele => ele !== " ").join('');
 }
@@ -39,7 +41,7 @@ const Legend = (props) => {
     return legendcontainer;
 }
 
-const CheckBox = (value) => {
+const CheckBox = (value, selection) => {
     const checkbox = document.createElement("div");
     checkbox.classList.add("filter-item");
     const checkInput = document.createElement("input");
@@ -48,9 +50,13 @@ const CheckBox = (value) => {
     checkInput.setAttribute("name",`${removeBlancks(value)}`);
     checkInput.addEventListener('click',()=>{
         if (checkInput.checked) {
-            window.localStorage.setItem(value,value);
+            selection.findIndex(e => e === value) === -1 ? selection.push(value) : null;
+            checkInput.dispatchEvent(selectionChangeEvent);
         }else{
-            window.localStorage.removeItem(value);
+            if(selection.findIndex(e => e === value) !== -1){
+                selection.splice(selection.findIndex(e => e === value),1);
+                checkInput.dispatchEvent(selectionChangeEvent); 
+            }
         }
     })
     const label = document.createElement("label");
@@ -63,7 +69,7 @@ const CheckBox = (value) => {
 }
 
 const Filter = (props) => {
-    const {title, id, values} = props;
+    const {title, id, values, selection} = props;
     const filter = document.createElement("fieldset");
     filter.classList.add("filter");
     const checkboxesContainer = document.createElement("div");
@@ -72,7 +78,7 @@ const Filter = (props) => {
     checkboxesContainer.setAttribute("id",title);
 
     for(const value of values){
-        checkboxesContainer.appendChild(CheckBox(value));
+        checkboxesContainer.appendChild(CheckBox(value, selection));
     }
 
     const legend = Legend({element: checkboxesContainer, id, title});

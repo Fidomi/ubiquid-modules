@@ -12,6 +12,9 @@
         }
 
         .jobs-selection{
-            margin-bottom: 20px;
+            padding: 20px 0px;
+            display: flex;
+            flex-flow: row wrap;
+            gap: 10px;
         }
 }
