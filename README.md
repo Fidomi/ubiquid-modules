@@ -1,13 +1,13 @@
 # JobTalk
-Petite application test présenant une recherche d'offres d'emploi tech.
+Petite application test présentant une recherche d'offres d'emploi dans la tech.
 
 ## Installation
 
 1. `npm i` </br>
-Installe la librairie sass
+Installer la librairie sass
 
 2. `npm run watch:build` </br>
-Compile les fichiers sass dans le dossier ./public/css
+Compiler les fichiers sass dans le dossier ./public/css
 
 3. Lancer un serveur local type Live Server pour servir le fichier index.html (autrement vous aurez des erreurs CORS policy)
 
