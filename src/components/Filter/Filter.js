@@ -4,7 +4,41 @@ const removeBlancks = (string) => {
     return string.split("").filter(ele => ele !== " ").join('');
 }
 
-const ArrowButton = (element, title) => {
+export const translateTitle = (title) => {
+    let newTitle = title;
+    switch (title) {
+        case 'Poste':
+        case 'jobTitle':
+            newTitle = 'jobTitle';
+            break;
+        case 'Contrat':
+        case 'contractType':
+            newTitle = 'contractType';
+            break;
+        case 'Télétravail':
+        case 'remoteWork':
+            newTitle = 'remoteWork';
+            break;
+        default:
+            break;
+    }
+    let dataTitle = title === 'Poste' ? 'jobTitle' : ( title === 'Contrat' ? 'contractType' : 'remoteWork');
+    return newTitle;
+}
+
+const addToSelection = (title, value, selection) => {
+    let dataTitle = translateTitle(title);
+    selection[dataTitle].push(value);
+    return selection;
+}
+
+export const removeFromSelection = (title, value, selection) => {
+    let dataTitle = translateTitle(title);
+    selection[dataTitle].splice(selection[dataTitle].findIndex(element => element.toLowerCase() === value.toLowerCase()),1);
+    return selection;
+}
+
+export const ArrowButton = (element, title) => {
     const arrow = document.createElement("button");
     arrow.classList.add("arrow-button");
     arrow.setAttribute("data-dropdown",title);
@@ -41,20 +75,27 @@ const Legend = (props) => {
     return legendcontainer;
 }
 
-const CheckBox = (value, selection) => {
+const CheckBox = (title, value, selection) => {
     const checkbox = document.createElement("div");
     checkbox.classList.add("filter-item");
     const checkInput = document.createElement("input");
     checkInput.setAttribute("type","checkbox");
     checkInput.setAttribute("id",`${removeBlancks(value)}`);
     checkInput.setAttribute("name",`${removeBlancks(value)}`);
+    const newTitle = translateTitle(title);
+    if(selection[newTitle].length>0 && selection[newTitle].find(ele => ele.toLowerCase() === value.toLowerCase())){
+        checkInput.setAttribute("checked",true);
+    }
     checkInput.addEventListener('click',()=>{
+        let dataTitle = translateTitle(title);
         if (checkInput.checked) {
-            selection.findIndex(e => e === value) === -1 ? selection.push(value) : null;
-            checkInput.dispatchEvent(selectionChangeEvent);
+            if(selection[dataTitle].find( element => element === value) === undefined) {
+                addToSelection(title, value, selection);
+                checkInput.dispatchEvent(selectionChangeEvent);
+            }
         }else{
-            if(selection.findIndex(e => e === value) !== -1){
-                selection.splice(selection.findIndex(e => e === value),1);
+            if(selection[dataTitle].find( element => element === value) !== undefined) {
+                removeFromSelection(title, value, selection);
                 checkInput.dispatchEvent(selectionChangeEvent); 
             }
         }
@@ -78,7 +119,7 @@ const Filter = (props) => {
     checkboxesContainer.setAttribute("id",title);
 
     for(const value of values){
-        checkboxesContainer.appendChild(CheckBox(value, selection));
+        checkboxesContainer.appendChild(CheckBox(title, value, selection));
     }
 
     const legend = Legend({element: checkboxesContainer, id, title});

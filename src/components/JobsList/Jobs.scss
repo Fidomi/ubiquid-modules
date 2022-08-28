@@ -1,3 +1,6 @@
 .jobs-list {
     padding:0 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
 }
