@@ -12,9 +12,9 @@ const SideMenu = (props) => {
     sideMenuContainer.innerHTML = `
       <div class="side-menu">
         <div>
-          <div class="side-menu__logo">
+          <h1 class="side-menu__logo">
             <img src="${logoUrl}" alt="${logoName}"/>
-          </div>
+          </h1>
           <nav>
             ${links}
           </nav>

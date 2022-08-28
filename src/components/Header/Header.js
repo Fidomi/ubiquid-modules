@@ -12,7 +12,7 @@ const Header = (props) => {
               </button>
           </div>
         <div class="header__mainpart">
-            <h1 class="header__mainpart__title">${title}</h1>
+            <h2 class="header__mainpart__title">${title}</h2>
             <button class="header__mainpart__print" type="button">
                 Imprimer la page
             </button>
