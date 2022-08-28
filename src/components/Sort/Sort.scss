@@ -1,0 +1,39 @@
+.job-sort {
+    margin-left: auto;
+    
+    .sort-selection {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 16px;
+        align-items: center;
+        padding: 10px 0px;
+        align-self: flex-end;
+    
+        &__button {
+            background: none;
+            color: #7650E0;
+        }
+    
+    }
+    
+    .filter-item {
+        gap: 0;
+
+        .checked-sort {
+            font-weight : 500;
+            color: #7650E0;
+        }
+
+        input {
+            margin: 0;
+        }
+
+        label {
+            padding: 0;
+        }
+    }
+
+
+}
+
+
