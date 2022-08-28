@@ -1,0 +1,208 @@
+.job {
+    width: 100%;
+    max-width: 1120px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    &__initiale {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding: 18px;
+        width: 76px;
+        height: 76px;
+        background: #F1EEFC;
+        border-radius: 6px;
+        color: #7650E0;
+        font-size: 38px;
+        font-weight: 600;
+    }
+
+    &__summary {
+        display:flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__separator {
+        width: 84px;
+        height: 0px;
+        border-bottom: 1px solid #505053;
+    }
+
+    &__title {
+        display:flex;
+        align-items: center;
+        gap: 10px;
+
+        :first-child {
+            font-weight: 500;
+            font-size: 18px;
+        }
+        :nth-child(2) {
+            padding: 7px 10px;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        &__ponctuel {
+            background: #FFF8E5;
+            color: #F0BA1C;
+        }
+        &__partiel {
+            background: #F1EEFC;
+            color: #7650E0;
+        }
+        &__total {
+            background: #E5F3FE;
+            color: #0074FF;
+        }
+    }
+
+    &__salary {
+        font-size: 18px;
+        font-weight: 400;
+        &__amount {
+            color: #7650E0;
+            font-weight: 500;
+        }
+    }
+
+    &__reduction {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+
+
+        .button-reduction {
+            width: 20px;
+            height: 20px;
+            background: none;
+            color: #7650E0;
+            font-size: 30px;
+            border: solid 1px #7650E0;
+            border-radius: 10px;
+
+            > div {
+            transform: translateY(-3px);
+            }
+
+
+        }
+    }
+
+    &__left {
+        width: calc( 75% - 76px );
+        padding: 0 24px;
+     }
+ 
+     &__right {
+         width: 25%;
+     }
+ 
+     &__right,
+     &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: start;
+     }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        & .job__right {
+            justify-content: start;
+            padding-top: 10px;
+            align-items: end;
+        }
+    }
+
+    
+    &__container__second {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+
+        .job__summary,
+        .job__description,
+        .job__button {
+            margin-top: 26px;
+        }
+
+        .job__summary {
+            align-items: start;
+            gap: 45px;
+        }
+
+        .job__location {
+            position: relative;
+            padding-left: 26px;
+            &::before {
+                content:url('../../../public/assets/svg-icons/city.svg') ;
+                position: absolute; 
+                top: -9px;
+                left: -8px;
+                scale: 0.7;
+            }
+        }
+
+        .job__contract {
+            position: relative;
+            padding-left: 26px;
+            &::before {
+                content:url('../../../public/assets/svg-icons/contract.svg') ;
+                position: absolute; 
+                top: -9px;
+                left: -10px;
+                scale: 0.7;
+            }
+        }
+
+        .job__startdate {
+            position: relative;
+            padding-left: 26px;
+            &::before {
+                content:url('../../../public/assets/svg-icons/date-start.svg') ;
+                position: absolute; 
+                top: -9px;
+                left: -10px;
+                scale: 0.7;
+            }
+        }
+
+        .job__studyLevel {
+            position: relative;
+            padding-left: 26px;
+            &::before {
+                content:url('../../../public/assets/svg-icons/stude.svg') ;
+                position: absolute; 
+                top: -9px;
+                left: -10px;
+                scale: 0.7;
+            }
+        }
+
+        .job__button {
+            background: none;
+            font-weight: 500;
+            font-size: 18px;
+            color: #7650E0;
+            align-self: end;
+            float: right;
+        }
+    }
+
+
+}
