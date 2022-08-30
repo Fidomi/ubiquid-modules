@@ -41,9 +41,12 @@
       case 'regularly':
         remote = 'Télétravail partiel';
         break;
-        case 'full':
-          remote = 'Télétravail total';
-          break;
+      case 'full':
+        remote = 'Télétravail total';
+        break;
+      case 'unknown':
+        remote = 'Non spécifié';
+        break;
       case 'none':
         remote = 'unknown';
       default : 
