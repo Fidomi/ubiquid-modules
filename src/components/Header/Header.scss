@@ -16,7 +16,7 @@
             padding-left: 10px;
         }
         button {
-            background-color: #F4F5F9;
+            background-color: $light-grey;
             padding-top: 5px;
         }
     }
@@ -35,7 +35,7 @@
         }
         &__print {
             padding: 8px 16px;
-            background-color: #7650E0;
+            background-color: $purple;
             color: white;
             border-radius: 10px;
             box-shadow: 0px 4px 13px rgba(67, 67, 67, 0.2);
@@ -43,7 +43,7 @@
             &:hover,
             &:focus {
                 background-color: white;
-                color: #7650E0; 
+                color: $purple; 
             }
         }
         

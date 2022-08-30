@@ -4,7 +4,7 @@
     padding: 25px;
     width: 240px;
     height: 100vh;
-    background: #7650E0;
+    background: $purple;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,7 +36,7 @@
     
         width: 187px;
         height: 72px;
-        background: #7650E0;
+        background: $purple;
         border-radius: 20px;
         color:white;
     
@@ -58,7 +58,7 @@
                 filter: invert(36%) sepia(44%) saturate(3626%) hue-rotate(242deg) brightness(89%) contrast(97%);
             }
             span {
-                color:#7650E0;
+                color:$purple;
             }
         }
     }

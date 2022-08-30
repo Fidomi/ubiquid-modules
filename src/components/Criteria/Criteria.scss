@@ -1,7 +1,7 @@
 .job-criterion {
     padding: 8px 16px;
     background-color: white;
-    border: solid 1px #7650E0;
+    border: solid 1px $purple;
     border-radius: 20px;
     display: flex;
     gap: 10px;
@@ -9,7 +9,7 @@
     .clear-button {
         width: 21px;
         height: 21px;
-        background: #7650E0;
+        background: $purple;
         border-radius: 10px;
     }
 }

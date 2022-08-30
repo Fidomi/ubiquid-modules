@@ -1,5 +1,14 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+$work-sans: 'Work Sans', sans-serif;
+
+//Colors
+$light-grey: #F4F5F9;
+$purple: #7650E0;
+
+
 html,body {
-    font-family: Work Sans;
+    font-family: $work-sans;
     font-size: 18px;
     font-weight: 500;
     line-height: 21px;

@@ -18,9 +18,9 @@
         padding: 18px;
         width: 76px;
         height: 76px;
-        background: #F1EEFC;
+        background: $light-grey;
         border-radius: 6px;
-        color: #7650E0;
+        color: $purple;
         font-size: 38px;
         font-weight: 600;
     }
@@ -58,7 +58,7 @@
         }
         &__partiel {
             background: #F1EEFC;
-            color: #7650E0;
+            color: $purple;
         }
         &__total {
             background: #E5F3FE;
@@ -70,7 +70,7 @@
         font-size: 18px;
         font-weight: 400;
         &__amount {
-            color: #7650E0;
+            color: $purple;
             font-weight: 500;
         }
     }
@@ -85,9 +85,9 @@
             width: 20px;
             height: 20px;
             background: none;
-            color: #7650E0;
+            color: $purple;
             font-size: 30px;
-            border: solid 1px #7650E0;
+            border: solid 1px $purple;
             border-radius: 10px;
 
             > div {
@@ -198,7 +198,7 @@
             background: none;
             font-weight: 500;
             font-size: 18px;
-            color: #7650E0;
+            color: $purple;
             align-self: end;
             float: right;
         }
